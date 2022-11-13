@@ -1,0 +1,15 @@
+<div class="rounded-lg flex flex-col hover:scale-105 bg-gray-50 duration-150 m-5 w-80">
+  <div [ngSwitch]="dataNasa.media_type" class="min-h-80 aspect-w-1 aspect-h-1 w-full overflow-hidden rounded-t-lg lg:aspect-none lg:h-80">
+    <ng-template ngSwitchCase="image"> <img [src]='dataNasa.url' alt="Error" class="h-full w-full object-cover object-center lg:h-full lg:w-full"/> </ng-template>
+    <ng-template ngSwitchCase="video"> <a [href]='dataNasa.url' class="h-full w-full flex justify-center items-center lg:h-full text-lg font-medium text-amber-600 hover:text-amber-400 lg:w-full" target="_blank">Просмотреть видео</a> </ng-template>
+    <ng-template ngSwitchCase="other"> <img src='https://topchiase24h.com/wp-content/uploads/2021/04/error-404-10.jpg' class="h-full w-full overflow lg:h-full lg:w-full"/> </ng-template>
+  </div>
+  <div class="mt-2 flex flex-col justify-between p-2">
+    <h2 class="font-medium"> {{ dataNasa.title }}</h2>
+    <p *ngIf="details" class="mt-2 text-sm text-gray-700 text-left">
+      {{ dataNasa.explanation }}
+    </p>
+
+    <button (click)="details = !details" class="w-24 mt-2 text-left text-sky-600 hover:text-sky-400 font-medium">{{ details ? 'Скрыть' : 'Подребнее'}}</button>
+  </div>
+</div>

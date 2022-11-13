@@ -1,0 +1,64 @@
+<app-error></app-error>
+
+<div class="bg-slate-800 min-h-screen max-h:full">
+  <header class="relative bg-slate-900">
+    <nav aria-label="Top" class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="flex h-16 items-center">
+        <!-- Logo -->
+        <div class="ml-4 flex lg:ml-0">
+          <a routerLink="">
+            <span class="sr-only">Your Company</span>
+            <img class="h-8 w-auto" src="https://www.svgrepo.com/show/89693/space-ship.svg" alt="err">
+          </a>
+        </div>
+
+        <!-- Flyout menus -->
+        <div class="hidden lg:ml-8 lg:block lg:self-stretch">
+          <div class="flex h-full space-x-8">
+            <a routerLink="" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}"
+              class="flex items-center text-sm font-medium hover:text-gray-50 text-gray-400">Main</a>
+            <a routerLink="about" routerLinkActive="active"
+              class="flex items-center text-sm font-medium hover:text-gray-50 text-gray-400">About</a>
+            <a routerLink="contact" routerLinkActive="active"
+              class="flex items-center text-sm font-medium hover:text-gray-50  text-gray-400">Contact</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+
+  <router-outlet></router-outlet>
+
+
+  <footer class="bg-slate-900 sticky top-[100vh] mt-2">
+    <nav class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="flex h-16 justify-between">
+        <div class="flex items-center">
+          <a routerLink="">
+            <img class="h-8 w-auto" src="https://www.svgrepo.com/show/89693/space-ship.svg" alt="err">
+          </a>
+        </div>
+
+        <div class="flex items-center text-gray-50">
+          <p>Nasa Inc.</p>
+        </div>
+
+        <div class="flex items-center ">
+          <a href="https://www.nasa.gov/" target="_blank">
+            <img class="h-8 w-auto" src="https://cdn.icon-icons.com/icons2/2699/PNG/512/nasa_logo_icon_170926.png"
+              alt="err">
+          </a>
+          <a href="https://www.youtube.com/user/NASAtelevision" target="_blank">
+            <img class="h-7 w-auto mx-3 my-3"
+              src="https://cdn.icon-icons.com/icons2/1211/PNG/512/1491580651-yumminkysocialmedia28_83061.png" alt="err">
+          </a>
+          <a href="https://ru.pinterest.com/nasa/" target="_blank">
+            <img class="h-7 w-auto" src="https://cdn.icon-icons.com/icons2/3007/PNG/512/pinterest_logo_icon_188466.png"
+              alt="err">
+          </a>
+        </div>
+      </div>
+    </nav>
+  </footer>
+</div>

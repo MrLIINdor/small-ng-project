@@ -1,0 +1,7 @@
+<p class="text-gray-50 text-center font-semibold text-lg mt-2" *ngIf="loading">Loading...</p>
+  <div class="max-w-6xl container flex-wrap flex mx-auto">
+    <app-card 
+      *ngFor="let dataNasa of store$ | async" 
+      [dataNasa]="dataNasa">
+    </app-card>
+  </div>
