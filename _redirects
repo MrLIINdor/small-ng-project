@@ -1,4 +1,4 @@
 touch src/_redirects
 
 
-/*  /index.html 200
+/*  src/index.html 200
